@@ -1,10 +1,23 @@
 import React, {useState} from 'react'
+import { Square } from './Square'
 
 export const Board = () => {
-    const [board, setBoard] = useState(Array(10).fill(Array(10).fill(null)))
-    console.log(board)
+    const [board, setBoard] = useState(() =>
+    Array(5).fill(null).map(() => Array(5).fill(null))
+  );
 
   return (
-    <div>Board</div>
-  )
+    <div className='board'>
+      {board.map((fila, filaIndex) => (
+        <div key={filaIndex} className="fila">
+          {fila.map((elemento, colIndex) => (
+            <Square key={colIndex} />
+          ))}
+        </div>
+      ))}
+    </div>
+    
+       
+  )   
 }
+
