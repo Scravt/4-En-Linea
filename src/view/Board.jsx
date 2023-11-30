@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Square } from './Square'
+import { winner } from '../utilidades/utilidades';
 
 export const Board = ({move, turn}) => {
     const [board, setBoard] = useState(() =>
@@ -23,7 +24,7 @@ export const Board = ({move, turn}) => {
       return newBoard;
     });
   }, [turn]);
- 
+ console.log(winner(board))
  
 
   return (

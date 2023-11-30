@@ -5,10 +5,10 @@ export const Buttons = ({ setMove, setTurn, turn }) => {
     setMove(col);
 
     // Cambia el estado 'turn' solo si el estado actual es 'X'
-    if (turn === 'X') {
+    if (turn === 'x') {
       setTurn('O');
     }else{
-      setTurn('X')
+      setTurn('x')
     }
   };
 
