@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Square = () => {
+export const Square = ({children}) => {
   return (
-    <div className='square'></div>
+    <div className='square'>
+      {children}
+    </div>
   )
 }

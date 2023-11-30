@@ -4,7 +4,7 @@ import './App.css'
 import { Buttons } from './butoons/Buttons'
 
 function App() {
-const [move, setMove] = useState(null)
+const [move, setMove] = useState('')
 
   return (
     <>

@@ -30,13 +30,13 @@ body {
   border-radius: 5px;
   display: grid;
   place-items: center;
-  cursor: pointer;
   font-size: 48px;
   margin: 3px;
 }
 
 .board{
   display: flex;
+  transform: rotate(-90deg);
 }
 
 .list-button{
@@ -50,4 +50,5 @@ button{
   margin: 3px;
   border: 2px solid #eee;
   border-radius: 5px;
+  cursor: pointer;
 }
