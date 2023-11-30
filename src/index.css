@@ -38,3 +38,16 @@ body {
 .board{
   display: flex;
 }
+
+.list-button{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button{
+  width: 90px;
+  height: 30px;
+  margin: 3px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+}

@@ -1,12 +1,17 @@
-
+import { useState } from 'react'
 import { Board } from './view/Board'
 import './App.css'
+import { Buttons } from './butoons/Buttons'
 
 function App() {
-
+const [move, setMove] = useState(null)
 
   return (
-   <Board/>
+    <>
+      <Buttons setMove={setMove}/>
+      <Board move={move}/>
+    </>
+   
   )
 }
 
