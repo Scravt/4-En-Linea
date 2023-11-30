@@ -1,27 +1,30 @@
 import React, {useState, useEffect} from 'react'
 import { Square } from './Square'
 
-export const Board = ({move}) => {
+export const Board = ({move, turn}) => {
     const [board, setBoard] = useState(() =>
     Array(5).fill(null).map(() => Array(5).fill(null))
   );
+  
  
   
   useEffect(() => {
-    setBoard((prevBoard) => {
-      const newBoard = [...prevBoard];
+    setBoard((board) => {
+      const newBoard = [...board];
       let i = 0;
       while (i < newBoard.length && newBoard[i][move] !== null) {
         i++;
       }
       if (i < newBoard.length) {
-        newBoard[i][move] = 'x'; 
+         newBoard[i][move] = turn; 
       }
-
+      console.log(board)
+      console.log(turn)
       return newBoard;
     });
-  }, [move]);
-  console.log(board)
+  }, [turn]);
+ 
+ 
 
   return (
     <div className='board'>
