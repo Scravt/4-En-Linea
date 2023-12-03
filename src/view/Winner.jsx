@@ -11,7 +11,7 @@ export const Winner = ({result, setResult, setBoard, turn}) => {
               }
             </h2>
 
-            <header>
+            <header >
               {result&& <Square>{turn}</Square>}
             </header>
 

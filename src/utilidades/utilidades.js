@@ -36,9 +36,10 @@ const winnerrow = (board) => {
 const draw = (board) => {
   let conteo = 0;
   for (let i = 0; i < board.length; i++) {
-    for (let j = 0; j < board[i].length - 1; j++) {
+    for (let j = 0; j < board[i].length; j++) {
       if (board[i][j] == null) {
         conteo++
+      }
       }
     }
     if (conteo < 1) {
@@ -46,19 +47,23 @@ const draw = (board) => {
     } else {
       return false;
     }
-  }
+  
   conteo = 0;
 }
 
 
 export const winner = (board) => {
-  if(winnerCol(board)|| winnerrow(board)){
+  if (winnerCol(board) || winnerrow(board)) {
     return true;
-  }else if (!winnerCol(board)&& !winnerrow(board)) {
-    return false;
-  } 
-  
-  if (draw(board)) {
-    return null  
   }
+
+  if (draw(board)) {
+    return null
+  }
+
+  else if (!winnerCol(board) && !winnerrow(board)) {
+    return false;
+  }
+
+
 };

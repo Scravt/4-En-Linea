@@ -39,6 +39,10 @@ body {
   transform: rotate(-90deg);
 }
 
+.fila>.square{
+  transform: rotate(90deg);
+}
+
 .list-button{
   display: flex;
   justify-content: space-evenly;
@@ -52,8 +56,20 @@ button{
   border: 2px solid #eee;
   border-radius: 5px;
   cursor: pointer;
+  background-color:crimson;
+  font-weight:bolder;
+}
+.gray{
+  color: gray;
 }
 
+.blue{
+  color:blue
+}
+
+.red{
+  color: red;
+}
 .winner {
   position: absolute;
   width: 100vw;

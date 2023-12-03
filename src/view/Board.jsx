@@ -32,9 +32,9 @@ export const Board = ({ move, turn }) => {
     <div>
       <div className='board'>
         {board.map((fila, filaIndex) => (
-          <div key={filaIndex} className="fila">
+          <div key={filaIndex} className="fila" >
             {fila.map((elemento, colIndex) => (
-              <Square key={colIndex}>{elemento}</Square>
+              <Square key={colIndex}  turn={turn}>{elemento}</Square>
             ))}
           </div>
         ))}
